@@ -5,7 +5,7 @@ import {
   MenuIcon,
   CloseIcon,
   ArrowRightIcon,
-} from "./icons.jsx";
+} from "./Icons.jsx";
 
 
 const links = [
@@ -14,15 +14,15 @@ const links = [
     label: "Home",
   },
   {
-    to: "/services",
+    to: "/Services",
     label: "Services",
   },
   {
-    to: "/blog",
+    to: "/Blog",
     label: "Resources",
   },
   {
-    to: "/contact",
+    to: "/Contact",
     label: "Contact",
   },
 ];
