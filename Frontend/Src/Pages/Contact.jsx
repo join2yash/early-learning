@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PhoneIcon, PinIcon } from "../Components/icons.jsx";
+import { PhoneIcon, PinIcon } from "../Components/Icons.jsx";
 
 // Contact form submissions with no backend/database:
 // 1. Sign up free at https://formspree.io, create a form, and copy its ID.
