@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { PhoneIcon, PinIcon } from "../Components/Icons.jsx";
 
 export default function Contact() {
-  const [form, setForm] = React.useState({
+  const [form, setForm] = useState({
     parentName: "",
     phone: "",
     email: "",
@@ -32,8 +32,6 @@ Message:
 ${form.message}
     `.trim();
 
-    // WhatsApp number
-    // Country code: India (+91)
     const whatsappNumber = "917838553575";
 
     const whatsappUrl =
@@ -123,9 +121,7 @@ ${form.message}
             type="text"
             required
             value={form.parentName}
-            onChange={(e) =>
-              update("parentName", e.target.value)
-            }
+            onChange={(e) => update("parentName", e.target.value)}
             className="w-full rounded-lg border border-sky-deep px-4 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo"
             placeholder="Enter your name"
           />
@@ -148,9 +144,7 @@ ${form.message}
               type="tel"
               required
               value={form.phone}
-              onChange={(e) =>
-                update("phone", e.target.value)
-              }
+              onChange={(e) => update("phone", e.target.value)}
               className="w-full rounded-lg border border-sky-deep px-4 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo"
               placeholder="Your phone number"
             />
@@ -162,6 +156,80 @@ ${form.message}
               className="block text-sm font-medium text-indigo mb-1.5"
               htmlFor="childAge"
             >
-              Child's age
+              Child's age{" "}
               <span className="text-ink/40 font-normal">
-               
+                (optional)
+              </span>
+            </label>
+
+            <input
+              id="childAge"
+              type="text"
+              value={form.childAge}
+              onChange={(e) => update("childAge", e.target.value)}
+              className="w-full rounded-lg border border-sky-deep px-4 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo"
+              placeholder="e.g. 4 years"
+            />
+          </div>
+
+        </div>
+
+        {/* Email */}
+        <div>
+          <label
+            className="block text-sm font-medium text-indigo mb-1.5"
+            htmlFor="email"
+          >
+            Email{" "}
+            <span className="text-ink/40 font-normal">
+              (optional)
+            </span>
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            value={form.email}
+            onChange={(e) => update("email", e.target.value)}
+            className="w-full rounded-lg border border-sky-deep px-4 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo"
+            placeholder="you@example.com"
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label
+            className="block text-sm font-medium text-indigo mb-1.5"
+            htmlFor="message"
+          >
+            What would you like to share?
+          </label>
+
+          <textarea
+            id="message"
+            required
+            rows={5}
+            value={form.message}
+            onChange={(e) => update("message", e.target.value)}
+            className="w-full rounded-lg border border-sky-deep px-4 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-indigo resize-none"
+            placeholder="Tell us how we can help..."
+          />
+        </div>
+
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full bg-gold hover:bg-gold-dark text-indigo font-semibold px-6 py-3 rounded-full transition-colors"
+        >
+          Send message on WhatsApp
+        </button>
+
+        {/* Helper Text */}
+        <p className="text-ink/50 text-xs text-center">
+          WhatsApp will open with your message ready to send.
+        </p>
+
+      </form>
+    </div>
+  );
+}
