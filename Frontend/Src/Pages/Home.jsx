@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "../Data/services.js";
-import { posts } from "../Data/posts.js";
+import { posts } from "../Data/Posts.js";
 import { SunriseHero, HeartIcon } from "../Components/Icons.jsx";
 import ServiceCard from "../Components/ServiceCard.jsx";
 import BlogCard from "../Components/BlogCard.jsx";
