@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { services } from "../data/services.js";
-import { posts } from "../data/posts.js";
+import { services } from "../Data/services.js";
+import { posts } from "../Data/Posts.js";
 import {
   ArrowRightIcon,
   BookIcon,
@@ -9,7 +9,7 @@ import {
   SparkleIcon,
   SpeechIcon,
   SunriseHero,
-} from "../components/icons.jsx";
+} from "../Components/Icons.jsx";
 
 const serviceVisuals = {
   "aba-therapy": {
