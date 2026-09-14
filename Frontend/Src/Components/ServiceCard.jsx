@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { PuzzleIcon, SpeechIcon, BookIcon } from "./icons.jsx";
+import { PuzzleIcon, SpeechIcon, BookIcon } from "./Icons.jsx";
 
 const iconMap = {
   puzzle: PuzzleIcon,
