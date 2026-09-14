@@ -1,3 +1,4 @@
+import React from "react";
 import { PhoneIcon, PinIcon } from "../Components/Icons.jsx";
 
 export default function Contact() {
