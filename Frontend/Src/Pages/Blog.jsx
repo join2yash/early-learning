@@ -1,4 +1,4 @@
-import { posts } from "../Data/posts.js";
+import { posts } from "../Data/Posts.js";
 import BlogCard from "../Components/BlogCard.jsx";
 
 export default function Blog() {
