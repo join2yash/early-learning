@@ -1,5 +1,5 @@
-import { posts } from "../data/posts.js";
-import BlogCard from "../components/BlogCard.jsx";
+import { posts } from "../Data/posts.js";
+import BlogCard from "../Components/BlogCard.jsx";
 
 export default function Blog() {
   return (
