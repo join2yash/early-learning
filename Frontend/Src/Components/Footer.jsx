@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LogoMark, PhoneIcon, PinIcon, HeartIcon } from "./icons.jsx";
+import { LogoMark, PhoneIcon, PinIcon, HeartIcon } from "./Icons.jsx";
 
 export default function Footer() {
   return (
