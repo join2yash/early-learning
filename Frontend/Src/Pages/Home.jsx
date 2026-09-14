@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { services } from "../data/services.js";
-import { posts } from "../data/posts.js";
-import { SunriseHero, HeartIcon } from "../components/icons.jsx";
-import ServiceCard from "../components/ServiceCard.jsx";
-import BlogCard from "../components/BlogCard.jsx";
+import { services } from "../Data/services.js";
+import { posts } from "../Data/posts.js";
+import { SunriseHero, HeartIcon } from "../Components/Icons.jsx";
+import ServiceCard from "../Components/ServiceCard.jsx";
+import BlogCard from "../Components/BlogCard.jsx";
 
 const pillars = [
   { label: "Understanding", detail: "We start by listening to your child and your family." },
