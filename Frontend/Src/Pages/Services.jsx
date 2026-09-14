@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { services } from "../data/services.js";
-import { PuzzleIcon, SpeechIcon, BookIcon } from "../components/icons.jsx";
+import { services } from "../Data/services.js";
+import { PuzzleIcon, SpeechIcon, BookIcon } from "../Components/Icons.jsx";
 
 const iconMap = { puzzle: PuzzleIcon, speech: SpeechIcon, book: BookIcon };
 const barColor = { puzzle: "bg-coral", speech: "bg-indigo", book: "bg-gold" };
