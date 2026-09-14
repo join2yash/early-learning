@@ -11,8 +11,8 @@ No backend, no database — just a React site. Simplest possible setup and hosti
 
 ```
 early-learning-point/
-└── frontend/
-    └── src/
+└── Frontend/
+    └── Src/
         ├── data/         Services and blog posts — edit these files to change content
         ├── pages/         Home, Services, Blog, Blog post, Contact
         └── components/   Navbar, Footer, cards, and original SVG icons/illustrations
