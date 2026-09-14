@@ -1,14 +1,55 @@
 import { Link } from "react-router-dom";
-import { services } from "../Data/services.js";
-import { posts } from "../Data/Posts.js";
-import { SunriseHero, HeartIcon } from "../Components/Icons.jsx";
-import ServiceCard from "../Components/ServiceCard.jsx";
-import BlogCard from "../Components/BlogCard.jsx";
+import { services } from "../data/services.js";
+import { posts } from "../data/posts.js";
+import {
+  ArrowRightIcon,
+  BookIcon,
+  HeartIcon,
+  PuzzleIcon,
+  SparkleIcon,
+  SpeechIcon,
+  SunriseHero,
+} from "../components/icons.jsx";
 
-const pillars = [
-  { label: "Understanding", detail: "We start by listening to your child and your family." },
-  { label: "Support", detail: "Consistent, one-to-one attention at every session." },
-  { label: "Growth", detail: "Plans that evolve as your child does." },
+const serviceVisuals = {
+  "aba-therapy": {
+    icon: PuzzleIcon,
+    className: "service-card-coral",
+    number: "01",
+  },
+  "speech-therapy": {
+    icon: SpeechIcon,
+    className: "service-card-blue",
+    number: "02",
+  },
+  "special-education": {
+    icon: BookIcon,
+    className: "service-card-gold",
+    number: "03",
+  },
+};
+
+const steps = [
+  {
+    number: "01",
+    title: "Talk to us",
+    text: "Tell us about your child, their strengths, and where you would like support.",
+  },
+  {
+    number: "02",
+    title: "Understand",
+    text: "We take time to understand your child's individual needs and learning style.",
+  },
+  {
+    number: "03",
+    title: "Make a plan",
+    text: "Together, we create a practical plan built around meaningful goals.",
+  },
+  {
+    number: "04",
+    title: "Grow together",
+    text: "We track progress and adapt the approach as your child develops.",
+  },
 ];
 
 export default function Home() {
@@ -16,108 +57,424 @@ export default function Home() {
   const featuredPosts = posts.slice(0, 3);
 
   return (
-    <div>
-      {/* Hero */}
-      <section className="max-w-6xl mx-auto px-6 pt-14 pb-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p className="text-coral font-semibold mb-3">Naveen Shahdara, Delhi</p>
-          <h1 className="font-display text-4xl md:text-5xl text-indigo leading-tight mb-6">
-            A brighter future for every child
-          </h1>
-          <p className="text-lg text-ink/70 max-w-md mb-8 leading-relaxed">
-            Early Learning Point offers individualized ABA therapy, speech therapy, and
-            special education support, built around your child's own pace and journey.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to="/contact"
-              className="bg-gold hover:bg-gold-dark text-indigo font-semibold px-7 py-3.5 rounded-full transition-colors"
-            >
-              Book a Consultation
-            </Link>
-            <Link
-              to="/services"
-              className="border-2 border-indigo text-indigo font-semibold px-7 py-3.5 rounded-full hover:bg-indigo hover:text-white transition-colors"
-            >
-              View Our Services
-            </Link>
+    <main>
+
+      {/* =====================================================
+          HERO
+      ====================================================== */}
+      <section className="hero-section">
+        <div className="hero-decoration hero-decoration-one" />
+        <div className="hero-decoration hero-decoration-two" />
+
+        <div className="site-container hero-container">
+
+          <div className="hero-copy">
+
+            <div className="eyebrow">
+              <span className="eyebrow-dot" />
+              Early support. Meaningful progress.
+            </div>
+
+            <h1 className="hero-title">
+              Helping little minds
+              <span> learn, communicate</span>
+              <br className="hidden sm:block" />
+              &amp; grow.
+            </h1>
+
+            <p className="hero-description">
+              Every child has their own way of learning. We provide
+              individualized therapy and educational support designed around
+              their strengths, needs, and pace.
+            </p>
+
+            <div className="hero-actions">
+              <Link to="/contact" className="button-primary">
+                Start a conversation
+                <ArrowRightIcon className="button-icon" />
+              </Link>
+
+              <Link to="/services" className="button-secondary">
+                Explore our support
+              </Link>
+            </div>
+
+            <div className="hero-trust">
+
+              <div className="hero-trust-item">
+                <HeartIcon className="trust-icon" />
+                <span>Child-centred</span>
+              </div>
+
+              <div className="trust-divider" />
+
+              <div className="hero-trust-item">
+                <span>Individualised support</span>
+              </div>
+
+              <div className="trust-divider" />
+
+              <div className="hero-trust-item">
+                <span>Family focused</span>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Illustration */}
+          <div className="hero-visual">
+
+            <div className="hero-visual-frame">
+
+              <div className="hero-badge hero-badge-one">
+                <span>★</span>
+                Small steps
+              </div>
+
+              <div className="hero-badge hero-badge-two">
+                <span>♥</span>
+                Big possibilities
+              </div>
+
+              <div className="hero-art-wrapper">
+                <SunriseHero className="hero-art-svg" />
+              </div>
+
+              <div className="hero-floating-icon hero-floating-one">
+                <PuzzleIcon />
+              </div>
+
+              <div className="hero-floating-icon hero-floating-two">
+                <SpeechIcon />
+              </div>
+
+              <div className="hero-floating-icon hero-floating-three">
+                <BookIcon />
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          PHILOSOPHY
+      ====================================================== */}
+      <section className="section-white">
+        <div className="site-container section-padding">
+
+          <div className="section-intro">
+            <div className="section-kicker">
+              <SparkleIcon />
+              OUR APPROACH
+            </div>
+
+            <h2 className="section-title">
+              Because every child deserves to be understood.
+            </h2>
+
+            <p className="section-lead">
+              We don't believe in a one-size-fits-all approach. We start with
+              your child — their personality, interests, abilities and
+              challenges — and build support around them.
+            </p>
+          </div>
+
+          <div className="approach-grid">
+
+            <article className="approach-item">
+              <div className="approach-number">01</div>
+
+              <div>
+                <h3>Understand</h3>
+                <p>
+                  We listen first and take time to understand the whole child,
+                  not just a diagnosis or difficulty.
+                </p>
+              </div>
+            </article>
+
+            <article className="approach-item">
+              <div className="approach-number">02</div>
+
+              <div>
+                <h3>Support</h3>
+                <p>
+                  Sessions are structured around practical goals while keeping
+                  learning comfortable, engaging and encouraging.
+                </p>
+              </div>
+            </article>
+
+            <article className="approach-item">
+              <div className="approach-number">03</div>
+
+              <div>
+                <h3>Grow</h3>
+                <p>
+                  Progress is a journey. We review what is working and adjust
+                  the plan as your child grows.
+                </p>
+              </div>
+            </article>
+
           </div>
         </div>
-        <SunriseHero className="w-full max-w-md mx-auto" />
       </section>
 
-      {/* Pillars */}
-      <section className="bg-sky">
-        <div className="max-w-6xl mx-auto px-6 py-14 grid sm:grid-cols-3 gap-8">
-          {pillars.map((p) => (
-            <div key={p.label} className="flex items-start gap-3">
-              <HeartIcon className="w-6 h-6 text-coral shrink-0 mt-1" />
-              <div>
-                <h3 className="font-display text-lg text-indigo mb-1">{p.label}</h3>
-                <p className="text-ink/70 text-sm leading-relaxed">{p.detail}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
-      {/* Services preview */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="max-w-xl mb-10">
-          <h2 className="font-display text-3xl text-indigo mb-3">Our services</h2>
-          <p className="text-ink/70 leading-relaxed">
-            Every plan is individualized support for your child's unique journey, across
-            three areas of care.
-          </p>
-        </div>
+      {/* =====================================================
+          SERVICES
+      ====================================================== */}
+      <section className="section-soft">
+        <div className="site-container section-padding">
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {featuredServices.map((s) => (
-            <ServiceCard key={s.slug} service={s} />
-          ))}
-        </div>
-      </section>
+          <div className="section-heading-row">
 
-      {/* Blog preview */}
-      <section className="bg-sky">
-        <div className="max-w-6xl mx-auto px-6 py-20">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
-              <h2 className="font-display text-3xl text-indigo mb-3">From our blog</h2>
-              <p className="text-ink/70 max-w-md">
-                Practical notes for parents, written by our team.
+              <div className="section-kicker">
+                <SparkleIcon />
+                HOW WE CAN HELP
+              </div>
+
+              <h2 className="section-title section-title-left">
+                Support built around your child.
+              </h2>
+
+              <p className="section-lead section-lead-left">
+                Our services work towards one simple goal: helping children
+                develop the skills they need to participate, communicate and
+                learn with confidence.
               </p>
             </div>
-            <Link to="/blog" className="text-indigo font-semibold hover:underline">
-              View all articles
+
+            <Link to="/services" className="text-link">
+              View all services
+              <ArrowRightIcon />
             </Link>
+
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {featuredPosts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
+
+
+          <div className="services-grid">
+
+            {featuredServices.map((service) => {
+
+              const visual = serviceVisuals[service.slug];
+              const Icon = visual?.icon || BookIcon;
+
+              return (
+                <Link
+                  key={service.slug}
+                  to={`/services#${service.slug}`}
+                  className={`new-service-card ${visual?.className || ""}`}
+                >
+
+                  <div className="service-number">
+                    {visual?.number}
+                  </div>
+
+                  <div className="new-service-icon">
+                    <Icon />
+                  </div>
+
+                  <div className="service-content">
+
+                    <h3>{service.name}</h3>
+
+                    <p className="service-tagline">
+                      {service.tagline}
+                    </p>
+
+                    <p className="service-summary">
+                      {service.summary}
+                    </p>
+
+                  </div>
+
+                  <div className="service-arrow">
+                    <ArrowRightIcon />
+                  </div>
+
+                </Link>
+              );
+            })}
+
           </div>
         </div>
       </section>
 
-      {/* CTA banner */}
-      <section className="bg-indigo">
-        <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-          <h2 className="font-display text-3xl text-white mb-4">
-            Let's support your child's journey together
-          </h2>
-          <p className="text-white/70 mb-8 max-w-xl mx-auto leading-relaxed">
-            Reach out for a first conversation about your child's behavioral and
-            developmental needs. No pressure, just a starting point.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-block bg-gold hover:bg-gold-dark text-indigo font-semibold px-8 py-3.5 rounded-full transition-colors"
-          >
-            Book a Consultation
-          </Link>
+
+      {/* =====================================================
+          PROCESS
+      ====================================================== */}
+      <section className="section-white">
+        <div className="site-container section-padding">
+
+          <div className="section-intro process-intro">
+
+            <div className="section-kicker">
+              <SparkleIcon />
+              A SIMPLE JOURNEY
+            </div>
+
+            <h2 className="section-title">
+              One step at a time.
+            </h2>
+
+            <p className="section-lead">
+              Starting support for your child doesn't have to feel
+              overwhelming. We'll guide you through the process.
+            </p>
+
+          </div>
+
+
+          <div className="steps-grid">
+
+            {steps.map((step, index) => (
+
+              <article className="step-item" key={step.number}>
+
+                <div className="step-top">
+
+                  <div className="step-number">
+                    {step.number}
+                  </div>
+
+                  {index < steps.length - 1 && (
+                    <div className="step-line" />
+                  )}
+
+                </div>
+
+                <h3>{step.title}</h3>
+
+                <p>{step.text}</p>
+
+              </article>
+
+            ))}
+
+          </div>
+
         </div>
       </section>
-    </div>
+
+
+      {/* =====================================================
+          BLOG
+      ====================================================== */}
+      <section className="section-soft">
+        <div className="site-container section-padding">
+
+          <div className="section-heading-row">
+
+            <div>
+
+              <div className="section-kicker">
+                <SparkleIcon />
+                FOR FAMILIES
+              </div>
+
+              <h2 className="section-title section-title-left">
+                Helpful things to know.
+              </h2>
+
+              <p className="section-lead section-lead-left">
+                Practical information to help parents understand development,
+                communication, behaviour and learning.
+              </p>
+
+            </div>
+
+            <Link to="/blog" className="text-link">
+              Read all articles
+              <ArrowRightIcon />
+            </Link>
+
+          </div>
+
+
+          <div className="blog-preview-grid">
+
+            {featuredPosts.map((post) => (
+
+              <Link
+                key={post.slug}
+                to={`/blog/${post.slug}`}
+                className="new-blog-card"
+              >
+
+                <div className="blog-card-top">
+
+                  <span className={`blog-category blog-${post.accent}`}>
+                    {post.icon}
+                  </span>
+
+                  <span>
+                    {post.readingMinutes} min read
+                  </span>
+
+                </div>
+
+                <h3>{post.title}</h3>
+
+                <p>{post.excerpt}</p>
+
+                <div className="blog-read">
+                  Read article
+                  <ArrowRightIcon />
+                </div>
+
+              </Link>
+
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          FINAL CTA
+      ====================================================== */}
+      <section className="final-cta">
+
+        <div className="cta-circle cta-circle-one" />
+        <div className="cta-circle cta-circle-two" />
+
+        <div className="site-container cta-content">
+
+          <div className="cta-icon">
+            <HeartIcon />
+          </div>
+
+          <h2>
+            Let's take the next little step together.
+          </h2>
+
+          <p>
+            If you're wondering whether support could help your child,
+            let's have a conversation. No pressure. Just a place to start.
+          </p>
+
+          <Link to="/contact" className="button-cta">
+            Talk to us
+            <ArrowRightIcon />
+          </Link>
+
+          <div className="cta-location">
+            <span>●</span>
+            Naveen Shahdara, Delhi
+          </div>
+
+        </div>
+      </section>
+
+    </main>
   );
 }
