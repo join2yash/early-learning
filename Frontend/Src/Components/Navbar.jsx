@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { LogoMark } from "./icons.jsx";
+import { LogoMark } from "./Icons.jsx";
 
 const links = [
   { to: "/", label: "Home" },
