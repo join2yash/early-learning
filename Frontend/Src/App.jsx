@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Footer from "./components/Footer.jsx";
-import Home from "./pages/Home.jsx";
-import Services from "./pages/Services.jsx";
-import Blog from "./pages/Blog.jsx";
-import BlogPost from "./pages/BlogPost.jsx";
-import Contact from "./pages/Contact.jsx";
+import Navbar from "./Components/Navbar.jsx";
+import Footer from "./Components/Footer.jsx";
+import Home from "./Pages/Home.jsx";
+import Services from "./Pages/Services.jsx";
+import Blog from "./Pages/Blog.jsx";
+import BlogPost from "./Pages/BlogPost.jsx";
+import Contact from "./Pages/Contact.jsx";
 
 export default function App() {
   return (
