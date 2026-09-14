@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { posts } from "../data/posts.js";
-import { PuzzleIcon, SpeechIcon, BookIcon } from "../components/icons.jsx";
+import { posts } from "../Data/posts.js";
+import { PuzzleIcon, SpeechIcon, BookIcon } from "../Components/icons.jsx";
 
 const iconMap = { puzzle: PuzzleIcon, speech: SpeechIcon, book: BookIcon };
 const accentBg = {
