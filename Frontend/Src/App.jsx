@@ -14,10 +14,10 @@ export default function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:slug" element={<BlogPost />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
